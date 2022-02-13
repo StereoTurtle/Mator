@@ -38,6 +38,7 @@
     padding: 1rem;
     background: #ED6C02;
     color: white;
+
   }
 
   .sectionBar p {
@@ -107,7 +108,7 @@
       font-size: 3em;
       line-height: 130%;
     }
-  } 
+  }
 </style>
 
 <section id="inicio">
@@ -120,7 +121,8 @@
       <p class="hero-subtitle-desktop">
         Entrega rapida • Alta calidad • Confiaza
       </p>
-      <a href="#comofunciona" class="waves-effect waves-light btn btn-orange" style="font-size: 0.938em; font-weight: 500;">
+      <a href="#comofunciona" class="waves-effect waves-light btn btn-orange"
+        style="font-size: 0.938em; font-weight: 500;">
         empezar
       </a>
     </div>
@@ -128,7 +130,7 @@
 </section>
 
 <section id="comofunciona">
-  <div class="sectionBar">
+  <div class="sectionBar z-depth-3">
     <p>
       ¿Cómo funciona?
     </p>
@@ -145,71 +147,66 @@
 </section>
 
 <section>
-  <div class="sectionBar">
+  <div class="sectionBar z-depth-3">
     <p>
       Información necesaria.
     </p>
   </div>
   <div class="formulario" style="margin-top: 2rem; padding: 1rem;">
-    <form action="post">
+    <form action="post" class="">
       <div class="row">
-        <form class="col s12 m6">
-          <div class="row">
-            <div class="input-field col s12 m6">
-              <input placeholder="Placeholder" id="nombre_completo" type="text" class="validate">
-              <label for="nombre_completo">Nombre completo</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 m6">
-              <input placeholder="Placeholder" id="correo_electronico" type="email" class="validate">
-              <label for="correo_electronico">Correo electrónico</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 m6">
-              <input placeholder="1 (809-803-2434)" id="telefono" type="tel" class="validate">
-              <label for="telefono">Numero telefonico</label>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="input-field col s12 m6">
-              <select id="materia_select">
-                <option value="" disabled selected>Elige una materia</option>
-                <option value="Matematicas">Matemáticas</option>
-                <option value="Humanidades">Tecnología</option>
-                <option value="Tecnologia">Tecnología</option>
-                <option value="Ingenierias">Ingenierías</option>
-                <option value="Otros">Otros</option>
-              </select>
-              <label>Materia</label>
-            </div>
-          </div>
-        
-          <div class="row">
-            <div class="input-field col s12 m6">
-              <select id="materia_select">
-                <option value="" disabled selected>Tipo</option>
-                <option value="Tarea">Tarea</option>
-                <option value="Examen">Examen</option>
-                <option value="Tutoria">Tutoria</option>
-              </select>
-              <label>Tipo</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12 m6">
-              <textarea id="descripcion" class="materialize-textarea"></textarea>
-              <label for="descripcion">Descripcion y requisitos</label>
-            </div>
-          </div>
-
-          <button class="waves-effect waves-light btn-large btn-orange" type="submit">Enviar</button>
-
-        </form>
+        <div class="input-field col s12">
+          <input placeholder="Placeholder" id="nombre_completo" type="text" class="validate">
+          <label for="nombre_completo">Nombre completo</label>
+        </div>
       </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Placeholder" id="correo_electronico" type="email" class="validate">
+          <label for="correo_electronico">Correo electrónico</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="1 (809-803-2434)" id="telefono" type="tel" class="validate">
+          <label for="telefono">Numero telefonico</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <select id="materia_select">
+            <option value="" disabled selected>Elige una materia</option>
+            <option value="Matematicas">Matemáticas</option>
+            <option value="Humanidades">Tecnología</option>
+            <option value="Tecnologia">Tecnología</option>
+            <option value="Ingenierias">Ingenierías</option>
+            <option value="Otros">Otros</option>
+          </select>
+          <label>Materia</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <select id="materia_select">
+            <option value="" disabled selected>Tipo</option>
+            <option value="Tarea">Tarea</option>
+            <option value="Examen">Examen</option>
+            <option value="Tutoria">Tutoria</option>
+          </select>
+          <label>Tipo</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="descripcion" class="materialize-textarea"></textarea>
+          <label for="descripcion">Descripcion y requisitos</label>
+        </div>
+      </div>
+
+      <button class="waves-effect waves-light btn-large btn-orange" type="submit">Enviar</button>
     </form>
   </div>
 </section>
