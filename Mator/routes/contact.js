@@ -1,13 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var path = require("path")
 var nodemailer = require("nodemailer")
 
-const title = 'Mator'
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: title });
+  res.render('contact');
 });
 
 router.post('/', (request, response) => {
@@ -21,12 +19,12 @@ router.post('/', (request, response) => {
 		}
 	});
 
-	var textBody = `Nombre: ${request.body.nombre_completo} \n Correo Electronico: ${request.body.correo_electronico} \n Numero de telefono: ${request.body.telefono} \n Materia: ${request.body.materia_select} \n Tipo: ${request.body.tipo} \n Descripion y requisitos: ${request.body.descripcion}`;
-	var htmlBody = `Nombre: ${request.body.nombre_completo} <br> Correo Electronico: ${request.body.correo_electronico} <br> Numero de telefono: ${request.body.telefono} <br> Materia: ${request.body.materia_select} <br> Tipo: ${request.body.tipo} <br> Descripion y requisitos: ${request.body.descripcion}`;
+	var textBody = `Nombre: ${request.body.nombre_completo} \n Correo Electronico: ${request.body.correo_electronico} \n Numero de telefono: ${request.body.telefono} Mensaje: ${request.body.mensaje}`;
+	var htmlBody = `Nombre: ${request.body.nombre_completo} <br> Correo Electronico: ${request.body.correo_electronico} <br> Numero de telefono: ${request.body.telefono} <br> Mensaje: ${request.body.mensaje}`;
 	var mail = {
 		from: "adrianozuna133@gmail.com", // sender address
 		to: "adrianozuna133@gmail.com", // list of receivers (THIS COULD BE A DIFFERENT ADDRESS or ADDRESSES SEPARATED BY COMMAS)
-		subject: "Nueva peticion de tarea", // Subject line
+		subject: "Mensaje de contacto", // Subject line
 		text: textBody,
 		html: htmlBody
 	};
@@ -42,5 +40,7 @@ router.post('/', (request, response) => {
 		}
 	});
 });
+
+module.exports = router;
 
 module.exports = router;
