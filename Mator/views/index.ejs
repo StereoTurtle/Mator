@@ -151,31 +151,31 @@
     </p>
   </div>
   <div class="formulario" style="margin-top: 2rem; padding: 1rem;">
-    <form action="post">
+    <form action="/" method="post">
       <div class="row">
         <form class="col s12 m6">
           <div class="row">
             <div class="input-field col s12 m6">
-              <input placeholder="Placeholder" id="nombre_completo" type="text" class="validate">
+              <input placeholder="Placeholder" id="nombre_completo" name="nombre_completo" type="text" class="validate" required="true">
               <label for="nombre_completo">Nombre completo</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m6">
-              <input placeholder="Placeholder" id="correo_electronico" type="email" class="validate">
+              <input placeholder="Placeholder" id="correo_electronico" name="correo_electronico" type="email" class="validate" required="true">
               <label for="correo_electronico">Correo electrónico</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m6">
-              <input placeholder="1 (809-803-2434)" id="telefono" type="tel" class="validate">
+              <input placeholder="1 (809-803-2434)" id="telefono" name="telefono" type="tel" class="validate" required="true">
               <label for="telefono">Numero telefonico</label>
             </div>
           </div>
           
           <div class="row">
             <div class="input-field col s12 m6">
-              <select id="materia_select">
+              <select id="materia_select" name="materia_select" required="true">
                 <option value="" disabled selected>Elige una materia</option>
                 <option value="Matematicas">Matemáticas</option>
                 <option value="Humanidades">Tecnología</option>
@@ -189,7 +189,7 @@
         
           <div class="row">
             <div class="input-field col s12 m6">
-              <select id="materia_select">
+              <select id="tipo" name="tipo" required="true">
                 <option value="" disabled selected>Tipo</option>
                 <option value="Tarea">Tarea</option>
                 <option value="Examen">Examen</option>
@@ -201,7 +201,7 @@
 
           <div class="row">
             <div class="input-field col s12 m6">
-              <textarea id="descripcion" class="materialize-textarea"></textarea>
+              <textarea id="descripcion" name="descripcion" class="materialize-textarea" required="true"></textarea>
               <label for="descripcion">Descripcion y requisitos</label>
             </div>
           </div>
